@@ -1,0 +1,60 @@
+.agents-section {
+  margin-top: 50px;
+  background: #fff;
+  padding: 50px;
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px ;
+    margin-bottom: 20px;
+    img {
+      width: 50px;
+    }
+  }
+
+  .agents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    .agent {
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .image-container {
+      background-image: url("../../assets/AgentsBackdrop.png");
+      position: relative;
+
+      .info-container {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        width: 70%;
+        text-align: center;
+        bottom: -16px;
+        background: #fff;
+        border-radius: 8px;
+        padding: 16px 5px;
+        box-shadow: 0 0px 8.8px 2px rgba(0, 0, 0, 0.25);
+        border-bottom: 4px solid #e2b116;
+
+        h5 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+      }
+    }
+  }
+}
