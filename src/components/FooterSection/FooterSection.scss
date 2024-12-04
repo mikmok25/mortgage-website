@@ -1,0 +1,33 @@
+.footer-section {
+  padding: 50px;
+  background: #292c39;
+  color: #fff;
+
+  .flex-row {
+    align-items: start;
+    .image-container {
+      align-self: center;
+      img {
+        width: 150px;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none;
+      li {
+        margin: 5px 0;
+        a {
+          color: #e0d2d2;
+          font-size: 14px;
+          &:hover {
+            color: #E2B116;
+          }
+        }
+      }
+    }
+  }
+}

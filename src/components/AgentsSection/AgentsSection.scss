@@ -1,5 +1,5 @@
 .agents-section {
-  margin-top: 50px;
+  margin: 50px 0 100px 0;
   background: #fff;
   padding: 50px;
 
@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px ;
+    gap: 15px;
     margin-bottom: 20px;
     img {
       width: 50px;
@@ -21,11 +21,12 @@
     gap: 25px;
 
     .agent {
-        cursor: pointer;
+      cursor: pointer;
+      transition: transform 0.2s ease;
 
-        &:hover {
-            transform: scale(1.1);
-        }
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     .image-container {
@@ -48,11 +49,85 @@
         border-bottom: 4px solid #e2b116;
 
         h5 {
-            font-size: 16px;
+          font-size: 16px;
         }
 
         p {
-            font-size: 14px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .selected-agent {
+    padding: 0 50px;
+    .flex-row {
+      gap: 50px;
+      align-items: start;
+    }
+    .agent-info {
+      padding-top: 10px;
+      .agent-name-title {
+        margin-bottom: 36px;
+        h3 {
+          text-transform: uppercase;
+          font-size: 25px;
+        }
+        span {
+          font-size: 16px;
+        }
+      }
+
+      .agent-description {
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-right: 80px;
+        line-height: 1.8;
+      }
+
+      .agent-contact {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .phone {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: bold;
+
+          img {
+            width: 30px;
+          }
+        }
+
+        .email {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: bold;
+          img {
+            width: 27px;
+          }
+        }
+      }
+    }
+
+    .flex-col {
+      .agent-image {
+        background-image: url("../../assets/AgentsBackdrop.png");
+      }
+      .view-agents {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-left: 10px;
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 18px;
+
+        img {
+          width: 30px;
         }
       }
     }
