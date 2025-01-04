@@ -65,7 +65,14 @@ function Navbar() {
             <Link to="/#calculators">CALCULATORS</Link>
           </li>
           <li>
-            <Link to="#">CONTACT US</Link>
+            <Link to="/estimate-my-rate"
+            onClick={() => {
+              setCurrentStep(0);
+              setTotalSteps(8);
+              setSelectedType("");
+              setValidationError("");
+            }}
+            >Evaluate My Rates</Link>
           </li>
         </ul>
       </div>

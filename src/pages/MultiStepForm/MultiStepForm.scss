@@ -1,0 +1,116 @@
+.multi-step-form-container {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 60vh;
+  max-width: 1000px;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"],
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    -moz-appearance: textfield;
+    padding: 25px 15px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .input-field {
+    position: relative;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+
+  .input-label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(69 69 69 / 88%);
+  }
+
+  .step-0 {
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .flex-row {
+      gap: 15px;
+    }
+    .card-container {
+      background: white;
+      width: 300px;
+      padding: 30px 30px;
+
+      label {
+        cursor: pointer;
+      }
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h4 {
+          text-align: center;
+        }
+
+        img {
+          width: 150px;
+        }
+      }
+
+      &.active {
+        box-shadow: 0 0px 7.8px 1px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  #flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .error-msg {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ee4d4d;
+    }
+  }
+
+  button {
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #e2b116;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .back-btn {
+    margin-right: 5px;
+    background: #bcb2b2;
+  }
+}

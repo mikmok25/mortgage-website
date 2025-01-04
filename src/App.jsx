@@ -19,6 +19,7 @@ import {
 import BackToTopBtn from "./components/BackToTopBtn/BackToTopBtn";
 import HomeAffordabilityCalculator from "./components/CalculatorsSection/MortgagePaymentCalculator/HomeAffordabilityCalculator";
 import MortgageAmortizationCalculator from "./components/CalculatorsSection/MortgagePaymentCalculator/MortgageAmortizationCalculator";
+import MultiStepForm from "./pages/MultiStepForm/MultiStepForm";
 
 function App() {
   const location = useLocation();
@@ -31,57 +32,59 @@ function App() {
 
       {showHeroSection && (
         <>
-        <div className="hero-section" id="hero-section">
-          <HeroSection />
-        </div>
-         <div className="logos-section">
-         <LogosSection />
-       </div>
- 
-       <div className="services-section" id="services">
-         <ServicesSection />
-       </div>
- 
-       <div className="testimonials-section" id="testimonials">
-         <TestimonialsSection />
-       </div>
- 
-       <div className="agents-section" id="agents">
-         <AgentsSection />
-       </div>
-       </>
+          <div className="hero-section" id="hero-section">
+            <HeroSection />
+          </div>
+          <div className="logos-section">
+            <LogosSection />
+          </div>
+
+          <div className="services-section" id="services">
+            <ServicesSection />
+          </div>
+
+          <div className="testimonials-section" id="testimonials">
+            <TestimonialsSection />
+          </div>
+
+          <div className="agents-section" id="agents">
+            <AgentsSection />
+          </div>
+        </>
       )}
 
-     
+      <Routes>
+        <Route path="/estimate-my-rate" element={<MultiStepForm />}></Route>
+      </Routes>
 
-      <div className="calculators-section" id="calculators"
-      style={{margin: showHeroSection ? "75px 0 75px 0" : "140px 0"}}
-      >
-        <Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div
+              className="calculators-section"
+              id="calculators"
+              style={{ margin: showHeroSection ? "75px 0 75px 0" : "140px 0" }}
+            >
+              <CalculatorsSection />
+              <Outlet />
+            </div>
+          }
+        >
           <Route
-            path="/"
-            element={
-              <>
-                <CalculatorsSection />
-                <Outlet />
-              </>
-            }
-          >
-            <Route
-              path="/mortgage-payment-calculator"
-              element={<MortgagePaymentCalculator />}
-            />
-            <Route
-              path="/home-affordability-calculator"
-              element={<HomeAffordabilityCalculator />}
-            />
-            <Route
-              path="/mortgage-amortization-calculator"
-              element={<MortgageAmortizationCalculator />}
-            />
-          </Route>
-        </Routes>
-      </div>
+            path="/mortgage-payment-calculator"
+            element={<MortgagePaymentCalculator />}
+          />
+          <Route
+            path="/home-affordability-calculator"
+            element={<HomeAffordabilityCalculator />}
+          />
+          <Route
+            path="/mortgage-amortization-calculator"
+            element={<MortgageAmortizationCalculator />}
+          />
+        </Route>
+      </Routes>
 
       <BackToTopBtn />
 

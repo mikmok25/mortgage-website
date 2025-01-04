@@ -11,7 +11,6 @@ const agents = [
     email: "dalston.spencer@cccapital.ca",
     content:
       "With many years in the mortgage lending business, Dalston has a list of happy families and business owners, who were given the key to their new home or business. Plus many more who have successfully re-mortgaged their home to do renovations or as a down payment for their children's new home.  Mortgage Brokerage # 10214 (CMBA Member)",
-    name: "Jason Mitanidis",
     year: "2022",
     image: Agent1,
   },
@@ -32,7 +31,8 @@ const agents = [
     title: "Mortgage Agent Level 1",
     phoneNumber: "647-720-5500",
     email: "jamesmoorthy@cccapital.ca",
-    content: "We are proad to announce our newest CCCapital Mortgage Agent team member. So if you are a first time buyer or looking to re-finance your existing property, call James now. Mortgage Brokerage # 10214 (CMBA Member)",
+    content:
+      "We are proad to announce our newest CCCapital Mortgage Agent team member. So if you are a first time buyer or looking to re-finance your existing property, call James now. Mortgage Brokerage # 10214 (CMBA Member)",
     year: "2022",
     image: Agent3,
   },
